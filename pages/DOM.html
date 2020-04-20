@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div id='a'>
+	<!-- üst menü kısmı-->
+	<div id="header">
+		<div id="logo">
+		
+		</div>
+		<div id="ustmenu">
+			<div id="tabs">
+ 				 <ul>
+   					 <li><a href="../index.html"><span>Anasayfa</span></a></li>
+   					 <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+  					 <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+  					 <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+  					 <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+  					 
+ 				 </ul>
+			</div>
+		</div>
+	</div> 
+	<!--orta kısım içerik kısmı-->
+	<div id='icerik'>
+		<div id="sidebar">
+			<div id="menu">
+			  <ul>
+  				 	 <li><a href="../index.html">Anasayfa</a></li>
+  				 	 <li><a href="JavaScript-Fonk.html"><span>JavaScript Fonksiyon Kullanımı</span></a></li>
+  				 	 <li><a href="Object.html"><span>JavaScript Object Kullanımı</span></a></li>
+    				 <li><a href="DOM.html"><span>JavaScript DOM Kullanımı</span></a></li>
+    				 <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+  					 <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+  					 <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+  					 <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+    				
+ 			 </ul>
+				</div>
+			</div>
+			<div id="content">
+			<h1>DOM (Document Object Model) nedir?</h1>
+			<img src="../assets/2.PNG" alt="">
+			<p>Bugün ki konumuzu incelemeden önce, <strong>Object-Orientated</strong>&nbsp;programlama hakkında az da olsa bahsetmemiz de fayda olduğunu düşünüyorum. Object-orientated programlamadaki amaç, bilginin nesnel terimler halinde saklanmasıdır. Örneğin, her nesnenin&nbsp;nasıl davranacağını belirleyebileceğimiz özellikler sayesinde nesnelere bir çok özellik kazandırabiliriz.</p>
+			<h3>DOM nedir?</h3>
+			<p><strong><em>Document Object Model</em></strong>’in kısaltılmışı olan <strong>DOM, </strong>asla bir dil olmayıp, dilleri barındıran bir <strong>standart&nbsp;olarak tanımlanmaktadır.</strong></p>
+			<p>Programlama dillerinin <strong>Object-Orientated</strong>&nbsp;olarak <strong>HTML</strong> ile anlaşması için HTML’i nesneler bütününe çevirecek bir ara standart gereklidir. DOM da tam bu noktada&nbsp;işe el atmaktadır. DOM, HTML ile programlama dilleri arasında bir <strong>standart</strong> oluşturarak bu dillerin HTML den bilgi alıp, bilgi vermesine yardımcı olur. <strong>DOM</strong>, Nesneler ve özelliklerden oluşur.</p>
+			<blockquote><p><strong>DOM</strong>’da <strong>HTML&nbsp;</strong>ile hazırladığınız sayfa, <strong><em>belge</em></strong>; bu belgenin içine yerleştirdiğiniz her türlü öğe ise <strong><em>nesne </em></strong>olarak adlandırılır.</p></blockquote>
+			<p><strong>DOM</strong> da nesnelerin birer öğe (<em>element</em>) olarak kullanılabilmesi için hiyerarşik bir düzen izlenerek çağrılmaları gerekir.<strong>&nbsp;</strong>HTML’deki her bir elamanın birbiri ile hiyearşik bir yapı oluşturması ile oluşur.</p>
+			<img src="../assets/3.PNG" alt="">
+			<h3>Neler&nbsp;yapar?</h3>
+			<p><strong>DOM</strong>&nbsp;bir ağaç dizini gibi bütün dokümanları birbirine bağlar. Birden fazla programlama dilleri destekler(<em>JS, PHP, Java, ASP vb.</em>) ve aynı zamanda dosya oluşturmak, elementleri ve içeriklerini silme/ekleme gibi fonsiyonları vardır.</p>
+			<blockquote><p>Önemli nokta yazdığımız dilin <strong>DOM</strong> yapılarına bağlı olmasıdır.</p></blockquote>
+			<pre><code> &lt;html&gt;
+&nbsp; &nbsp;&lt;head&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;titte&gt;Webmaster.Kitchen&lt;/titte&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script type="text/javascript"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>document.formAdi.adiniz.value = 'Hakan Karataş';</strong>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>document.getElementbyId('memleket').value = 'BAYBURT';</strong>
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;/script&gt;
+&nbsp; &nbsp;&lt;/head&gt;
+&nbsp; &nbsp;&lt;body&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;form name="formAdi" method="post" action=""&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;input type="text" name="adiniz"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;input type="text" id="memleket"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;/form&gt;
+&nbsp; &nbsp;&lt;/body&gt;
+&lt;/html&gt;</code><code>
+</code></pre>
+
+<p><strong>HTML</strong> içerisine yerleştirilmiş öğeleri çağırmak için, içinde bulunduğu diğer öğelerin çağrılması bir yöntem iken, bir öğeye bir <strong>id</strong> vererek bu <strong>id</strong> üzerinden çağırmak da bir başka yöntemdir.</p>
+<p><strong>JavaScript</strong> kodumuzun ilk satırında metin kutusunun değeri <strong>hiyerarşik olarak çağrılmış ve değiştirilmiştir.</strong>&nbsp;İkinci satırda ise hiyerarşik yapı daha az önemsenerek <strong>JavaScript</strong> içindeki <strong>DOM</strong>’un temellerinden olan <strong>getElementById</strong> metodu kullanılmıştır.</p>
+<blockquote><p><strong>JQuery</strong>’nin iyi anlaşılması için <strong>DOM</strong> mantığını iyi bir şekilde çözmekte fayda vardır.</p></blockquote>
+<p>Sonuç olarak eğer client-side olarak HTML’e daha fazla hükmetmek istiyorsanız, kullandığınız dil&nbsp;JavaScript, PHP, ASP vb. ne olursa olsun kesinlikle <strong>DOM</strong> un erişim yöntemlerini çok iyi biliyor olmanız gerekir.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

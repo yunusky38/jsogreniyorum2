@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div id='a'>
+	<!-- üst menü kısmı-->
+	<div id="header">
+		<div id="logo">
+		
+		</div>
+		<div id="ustmenu">
+			<div id="tabs">
+ 				 <ul>
+   					 <li><a href="../index.html"><span>Anasayfa</span></a></li>
+   					 <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+  					 <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+  					 <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+  					 <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+  					 
+ 				 </ul>
+			</div>
+		</div>
+	</div> 
+	<!--orta kısım içerik kısmı-->
+	<div id='icerik'>
+		<div id="sidebar">
+			<div id="menu">
+			  <ul>
+  				 	 <li><a href="../index.html">Anasayfa</a></li>
+  				 	 <li><a href="JavaScript-Fonk.html"><span>JavaScript Fonksiyon Kullanımı</span></a></li>
+  				 	 <li><a href="Object.html"><span>JavaScript Object Kullanımı</span></a></li>
+    				 <li><a href="DOM.html"><span>JavaScript DOM Kullanımı</span></a></li>
+    				 <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+  					 <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+  					 <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+  					 <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+    				
+ 			 </ul>
+				</div>
+			</div>
+			<div id="content">
+			
+				<h1>javaScript Object (Nesne) Kullanımı</h1>
+
+			<p>5 adet veri tip, 3 adet Object tipi bulunan <strong>javaScript</strong> dilinde veri tiplerini&nbsp;<strong>Number, String, Boolean, Undefined, ve Null&nbsp;</strong>(bu da bir object’dir). <strong>Object</strong> tipini ise&nbsp;<strong>fonksiyon, dizi, nesne (object)&nbsp;</strong>&nbsp;gibi referanslar oluşturmaktadır. Bu yazımızda <strong>JavaScript’te</strong> bir <strong>Object</strong> nasıl oluşturulur ve nasıl kullanılır bunu göreceğiz. Öncelikle <strong>Object</strong> oluşturma hangi yöntemlerle yapılır buna bakalım.</p>
+
+			<p><strong>JavaScript’te</strong> nesne oluşturmak için <strong>{ }</strong> süslü parantezler kullanılır.</p>
+<p><strong>var arac={ };</strong></p>
+	<p><strong>var ogrenci={ };</strong></p>
+	<p>Yukarıdaki şekilde bir tanımlama yapıldığında içinde hiçbir şey bulunmayan <strong>arac</strong> ve <strong>ogrenci</strong> nesneleri oluşturulmuş olur.</p>
+	<p>Şimdi de oluşturulan nesnelere özellik atamasının nasıl yapılacağına bakalım.</p>
+
+	<textarea style="margin: 0px; width: 289px; height: 147px;"> var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60
+}; </textarea>
+	
+	<p>
+Yukarıdaki tanımlamaya baktığımızda;</p>
+<p><strong>Özellik: değer </strong></p>
+<p>şeklinde bir atama yapıldığını ve birden fazla özellik eklendiğinde <strong>“,” virgül</strong> ile ayrıldığını görüyoruz.</p>
+<p>Şimdi aşağıdaki örneği inceleyelim. Örneğimizde&nbsp; <strong>arac</strong> isimli <strong>Object</strong> (nesne) tanımlaması ve bu <strong>nesneye ait özellik tanımlaması</strong> yapılarak bu özelliklerin sayfada yazdırılması sağlanmakta.</p>
+
+	<textarea style="margin: 0px; width: 927px; height: 588px;"> <!DOCTYPE html>
+<html>
+    <head>
+        <title>www.yazilimkodlama.com</title>
+        <meta charset="utf-8">
+    </head>
+<body>
+ 
+<p><u>JavaScript Object Kullanımı</u></p>
+ 
+<p id="bilgi"></p>
+<p><b>Araç Detayları</b></p>
+<p id="detay"></p>
+<script>
+var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60
+};
+ 
+document.getElementById("bilgi").innerHTML =
+arac.marka + " " + arac.model + " model "+arac.yakit+" aracın saatlik kiralama ücreti : "+arac.saatUcreti;
+    
+document.getElementById("detay").innerHTML=
+    "Marka      : "+arac.marka+"<br>"+
+    "Model      : "+arac.model+"<br>"+
+    "Model Yılı : "+arac.model+"<br>"+
+    "Renk       : "+arac.renk+"<br>"+
+    "Yakıt Türü : "+arac.yakit+"<br>"+
+    "Saat Ücreti: "+arac.saatUcreti;
+    
+</script>
+ 
+</body>
+</html> </textarea>
+
+<p>
+Sayfamızı çalıştırdığımızda aşağıdaki görüntü oluşacaktır.</p>
+<img src="../assets/1.PNG" alt="">
+<p>Görüleceği üzere<strong> ödenecek tutar</strong> metot ile hesaplanarak gösterilmiştir.</p>
+<p>Şimdi basit bir örnek daha oluşturalım. Bu örneğimizde <strong>ogrenci</strong> isimli bir object’ e ait <strong>özellik</strong> ve <strong>metot</strong> tanımlaması yapacağız. ad ve soyad özelliklerinin yazdırılmasını sağlayacağız. Örneğe ait <strong>&lt;script&gt; &lt;/script&gt;</strong> kodları;</p>
+
+		<textarea style="margin: 0px; width: 624px; height: 242px;"> <script>
+var Ogrenci={
+ad:"Ali",
+soyad:"Al",
+adSoyad:function(){
+ 
+return this.ad+" "+this.soyad;
+}
+ 
+}
+ 
+document.write(Ogrenci.adSoyad());
+</script> </textarea>
+
+
+<p>Başka bir <strong>JavaScript</strong> nesnesi oluşturma yöntemi de&nbsp;<strong>constructor pattern</strong>(yapıcı desen) olarak tanımlamak mümkündür. Fonksiyon tanımlama yöntemi ile sınıf oluşturup, &nbsp;oluşturulan sınıf&nbsp;<strong>new</strong>&nbsp;anahtarı ile nesne olarak türetilir.<br>
+		</p>
+			<textarea style="margin: 0px; width: 832px; height: 763px;"> <script>
+var Uye=function(){
+ 
+/*
+var anahtarı ile fonksiyon içinde tanımlanmıştır. fonksiyon dışında çağırma şansımız yok
+Uye.isim olarak çağıramayız. Sadece this.degiskenadi şeklinde yapılan bildirimler dışarıdan çağırır.
+*/
+var isim;
+var soyisim;
+this.yas=18;
+ 
+/*fonksiyon içinde tanımlanan isim değişkenine dışarıdan değer aktarmak için kullanılır. setter metodu*/
+this.setIsim=function(v)
+{
+isim=v;
+}
+/*fonksiyon içinde tanımlanan isim değişkenindeki değeri okumak için kullanılır. getter metodu*/
+this.getIsim=function()
+{
+return isim;
+}
+ 
+this.setSoyisim=function(v)
+{
+soyisim=v;
+}
+ 
+/*sınıf içinde tanımlanmış bir fonksyion*/
+this.adSoyad=function(){
+ 
+return isim+" "+soyisim;
+}
+ 
+}
+ 
+var Uye1=new Uye();
+ 
+Uye1.setIsim("hayri");
+Uye1.setSoyisim("KOÇ");
+ 
+/*this anahtarı ile tanımlanan değişken doğrudan çarılıyor.*/
+Uye1.yas=20;
+document.write(Uye1.adSoyad());
+document.write("<br>");
+document.write(Uye1.getIsim()+" ");
+document.write("<br>");
+document.write(Uye1.yas);
+ 
+</script> </textarea>
+				
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div id='a'>
+        <!-- üst menü kısmı-->
+        <div id="header">
+            <div id="logo">
+
+            </div>
+            <div id="ustmenu">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="../index.html"><span>Anasayfa</span></a></li>
+                        <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+                        <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+                        <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+                        <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--orta kısım içerik kısmı-->
+        <div id='icerik'>
+            <div id="sidebar">
+                <div id="menu">
+                    <ul>
+                        <li><a href="../index.html">Anasayfa</a></li>
+                        <li><a href="JavaScript-Fonk.html"><span>JavaScript Fonksiyon Kullanımı</span></a></li>
+                        <li><a href="Object.html"><span>JavaScript Object Kullanımı</span></a></li>
+                        <li><a href="DOM.html"><span>JavaScript DOM Kullanımı</span></a></li>
+                        <li><a href="html-Element.html"><span>Dinamik Html Elementleri</span></a></li>
+                        <li><a href="oyun.html"><span>Adam Asmaca</span></a></li>
+                        <li><a href="Form.html"><span>Kullanıcı Form</span></a></li>
+                        <li><a href="Alısveris.html"><span>Alışveriş sepeti</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <form action="" name="uye_formu" method="post" onsubmit="return isValid(this)">
+                    <table>
+                        <tr>
+                            <td> <label for="" style="width: 150px;">Kullanıcı Adı : </label>
+                            </td>
+                            <td><input type="text" name="kadi" placeholder="Kullanıcı Adı" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="" style="width: 150px;">E-Mail : </label></td>
+                            <td><input type="mail" name="email" placeholder="Mail Adresi" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Şifre : </label></td>
+                            <td> <input type="password" name="sifre1" placeholder="Şifre Belirle" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Şifre Tekrar : </label></td>
+                            <td> <input type="password" name="sifre2" placeholder="Şifre Tekrarı" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: right;"><input type="submit" value="Kaydet"></td>
+                        </tr>
+                    </table>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function isValid(frm) {
+            var kadi = frm.kadi.value;
+            var sifre1 = frm.sifre1.value;
+            var sifre2 = frm.sifre2.value;
+            var email = frm.email.value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            if (kadi == null || kadi == "" || kadi.length < 3) {
+                alert("Kullanıcı adı 3 karakterden az olamaz");
+                return false;
+            }
+            if (sifre1 == null || sifre1 == "" || sifre2 == null || sifre2 == "") {
+                alert("Şifreyi boş bırakmayın");
+                return false;
+            }
+            if (!(sifre1 == sifre2)) {
+                alert("Şifreler eşleşmiyor");
+                return false;
+            }
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
+                alert("Geçerli email adresi girin");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
